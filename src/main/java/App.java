@@ -10,8 +10,9 @@ public class App {
         HelloWorld HelloBean2 = (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(HelloBean1.equals(HelloBean2));
 
-        Cat catBean1 = (Cat) applicationContext.getBean("cat");
-        Cat catBean2 = (Cat) applicationContext.getBean("cat");
+        var catBean1 = applicationContext.getBean(Cat.class);
+        var catBean2 = applicationContext.getBean(Cat.class);
+
         System.out.println(catBean1.equals(catBean2));
 
 
